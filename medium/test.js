@@ -14,7 +14,7 @@ var threeSum = function(nums) {
         var obj = {};
         var result = [];
         var target = 0-nums[i];
-        nums1.map(item=>{
+        nums1.map((item,index)=>{
             var rest = target - item;
             if(obj.hasOwnProperty(item)){
                 var arrTemp = [obj[item],rest,0-target];
@@ -28,4 +28,4 @@ var threeSum = function(nums) {
     return lastResult;
 };
 
-console.log(threeSum([0,0,0,0]))
+console.log(threeSum([0,0,0,0,0]))
