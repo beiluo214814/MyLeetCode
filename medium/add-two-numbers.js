@@ -21,7 +21,6 @@
 var addTwoNumbers = function(l1, l2) {
     var target = new ListNode(0);
     var result = target;
-    
     var temp1 = l1,temp2 = l2;
     var temp1val = 0,temp2val = 0,sum = 0;
     while( temp1 || temp2 || sum){
@@ -29,9 +28,8 @@ var addTwoNumbers = function(l1, l2) {
         temp2val = temp2 ? temp2.val : 0;
         sum += temp1val + temp2val;
         
-        target.next = new ListNode(0);
+        target.next = new ListNode(sum%10);
         target = target.next;
-        target.val = sum%10;
         
         sum = Math.floor(sum/10);
         
