@@ -5,11 +5,9 @@
 var groupAnagrams = function(strs) {
     var obj = {};
     var result = [];
-    var itemArr,sortedStr;
+    var sortedStr;
     strs.map(item=>{
-        itemArr = item.split('');
-        itemArr.sort((a,b)=>a.charCodeAt()-b.charCodeAt());
-        sortedStr = itemArr.join('');
+        sortedStr = item.split('').sort().join('');
         if(obj.hasOwnProperty(sortedStr)){
             result[obj[sortedStr]].push(item);
         }else{
