@@ -5,9 +5,11 @@
 var firstMissingPositive = function(nums) {
     let max = 0,obj = {},j=1;
     for(let i=0,len = nums.length;i<len;i++){
-       obj[nums[i]] = true;
+       if(nums[i] > 0){
+          obj[nums[i]] = true;
+       }
        if(max < nums[i]){
-           max = nums[i];
+          max = nums[i];
        }
     }
     
